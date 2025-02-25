@@ -60,7 +60,7 @@ const ColumnContainer = (props: Props) => {
       style={style}
       className='
         bg-gray-800 
-        w-[350px] 
+        w-[300px] 
         h-[500px]
         max-h-[500px]
         rounded-md
@@ -78,7 +78,9 @@ const ColumnContainer = (props: Props) => {
       style={style}
       className='
         bg-gray-800 
-        w-[350px] 
+        w-[300px] 
+        md:w-[300px]
+        lg:w-[300px]
         h-[500px]
         max-h-[500px]
         rounded-md

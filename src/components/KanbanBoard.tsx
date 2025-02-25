@@ -156,16 +156,18 @@ const KanbanBoard = () => {
       <div className="flex justify-center items-center">
         <button className="
           h-[60px] 
-          w-[350px]
-          min-w-[350px]
+          w-[300px]
+          min-w-[300px]
           cursor-pointer
           rounded-lg
           border-2
           p-4
+          mt-12
           bg-gray-800
           hover:ring-2
           flex
           gap-2
+          mb-3
         " onClick={createColumn}>
           <PlusIcon />
           Add Column
@@ -188,7 +190,7 @@ const KanbanBoard = () => {
           onDragOver={onDragOver}>
           <div className='m-auto flex gap-4'>
             
-            <div className='flex flex-col xl:flex-row gap-4'>
+            <div className='flex flex-col xl:flex-row gap-2'>
               <SortableContext items={columnsId}>
                 {
                   columns.map((column) => {
