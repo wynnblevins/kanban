@@ -34,7 +34,8 @@ const TaskCard = (props: Props) => {
 
   const style = {
     transition,
-    transform: CSS.Transform.toString(transform)
+    transform: CSS.Transform.toString(transform),
+    touchAction: 'none'
   };
 
   const toggleEditMode = () => {
@@ -133,7 +134,8 @@ const TaskCard = (props: Props) => {
         w-full 
         overflow-y-auto
         overflow-x-hidden
-        whitespace-pre-wrap">{task.content}</p>
+        whitespace-pre-wrap"
+        style={style}>{task.content}</p>
       { mouseIsOver && <button onClick={() => deleteTask(task.id)} className='
         stroke-white 
         absolute

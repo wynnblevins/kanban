@@ -51,7 +51,8 @@ const ColumnContainer = (props: Props) => {
 
   const style = {
     transition,
-    transform: CSS.Transform.toString(transform)
+    transform: CSS.Transform.toString(transform),
+    touchAction: 'none'
   };
 
   if (isDragging) {
