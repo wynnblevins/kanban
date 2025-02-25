@@ -152,7 +152,26 @@ const KanbanBoard = () => {
   };
   
   return (
-    <div className='
+    <>
+      <div className="flex justify-center items-center">
+        <button className="
+          h-[60px] 
+          w-[350px]
+          min-w-[350px]
+          cursor-pointer
+          rounded-lg
+          border-2
+          p-4
+          bg-gray-800
+          hover:ring-2
+          flex
+          gap-2
+        " onClick={createColumn}>
+          <PlusIcon />
+          Add Column
+        </button>
+      </div>
+      <div className='
         m-auto 
         flex 
         min-h-screen 
@@ -168,7 +187,8 @@ const KanbanBoard = () => {
           sensors={sensors}
           onDragOver={onDragOver}>
           <div className='m-auto flex gap-4'>
-            <div className='flex gap-4'>
+            
+            <div className='flex flex-col xl:flex-row gap-4'>
               <SortableContext items={columnsId}>
                 {
                   columns.map((column) => {
@@ -188,22 +208,6 @@ const KanbanBoard = () => {
               </SortableContext>
               
             </div>
-            <button className="
-              h-[60px] 
-              w-[350px]
-              min-w-[350px]
-              cursor-pointer
-              rounded-lg
-              border-2
-              p-4
-              bg-gray-800
-              hover:ring-2
-              flex
-              gap-2
-            " onClick={createColumn}>
-              <PlusIcon />
-              Add Column
-            </button>
           </div>
           { createPortal(<DragOverlay>
             {activeColumn && <ColumnContainer 
@@ -223,7 +227,8 @@ const KanbanBoard = () => {
               updateTask={updateTask}></TaskCard>}
           </DragOverlay>, document.body)}
         </DndContext>
-    </div>
+      </div>
+    </>
   )
 }
 
