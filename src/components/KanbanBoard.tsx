@@ -170,7 +170,7 @@ const KanbanBoard = () => {
           mb-3
         " onClick={createColumn}>
           <PlusIcon />
-          Add Column
+          Add A Stage
         </button>
       </div>
       <div className='
