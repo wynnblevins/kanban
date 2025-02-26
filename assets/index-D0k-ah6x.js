@@ -184,7 +184,7 @@ Error generating stack: `+l.message+`
           flex
           gap-2
           mb-3
-        `,onClick:H,children:[ct.jsx(Sv,{}),"Add Column"]})}),ct.jsx("div",{className:`
+        `,onClick:H,children:[ct.jsx(Sv,{}),"Add A Stage"]})}),ct.jsx("div",{className:`
         m-auto 
         flex 
         min-h-screen 
